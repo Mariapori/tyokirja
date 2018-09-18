@@ -27,6 +27,12 @@ namespace Työkirja
             Form2 form2 = new Form2();
             form2.Show();
             this.Hide();
+            form2.FormClosed += new FormClosedEventHandler(Form2_FormClosed);
+        }
+
+        void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
     }
 }
