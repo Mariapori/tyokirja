@@ -17,9 +17,13 @@ namespace Työkirja
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        public string nimi = "";
+        public string yritys = "";
 
+        private void btnTallenna_Click(object sender, EventArgs e)
+        {
+            nimi = txtNimi.Text;
+            yritys = txtYritys.Text;
         }
     }
 }
