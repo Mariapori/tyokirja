@@ -17,10 +17,34 @@ namespace Työkirja
             InitializeComponent();
         }
 
+        public string asiakas = "";
+        public string tehtava = "";
+        public string aika = "";
+        public string tunnit = "";
+        public string kuvaus = "";
+        public string rivi = "";
+
         public void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
             Form1 frm = new Form1();
             frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<string> kirjaukset = new List<string>();
+
+            asiakas = textBox2.Text;
+            tehtava = textBox1.Text;
+            aika = dateTimePicker1.Text;
+            tunnit = textBox4.Text;
+            kuvaus = textBox3.Text;
+
+            kirjaukset.Add(asiakas);
+            kirjaukset.Add(tehtava);
+            kirjaukset.Add(aika);
+            kirjaukset.Add(tunnit);
+            kirjaukset.Add(kuvaus);
         }
     }
 }
