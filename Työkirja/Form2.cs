@@ -45,6 +45,14 @@ namespace Työkirja
             kirjaukset.Add(aika);
             kirjaukset.Add(tunnit);
             kirjaukset.Add(kuvaus);
+
+            StringBuilder builder = new StringBuilder();
+            foreach (string tieto in kirjaukset)
+            {
+                builder.Append(tieto).Append(", "); 
+            }
+            string result = builder.ToString(); 
+            MessageBox.Show(result);
         }
     }
 }
