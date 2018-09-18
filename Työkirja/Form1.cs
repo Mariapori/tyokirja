@@ -17,13 +17,16 @@ namespace Työkirja
             InitializeComponent();
         }
 
-        public string nimi = "";
-        public string yritys = "";
+        public static string nimi = "";
+        public static string yritys = "";
 
         private void btnTallenna_Click(object sender, EventArgs e)
         {
             nimi = txtNimi.Text;
             yritys = txtYritys.Text;
+            Form2 form2 = new Form2();
+            form2.Show();
+            this.Hide();
         }
     }
 }
